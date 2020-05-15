@@ -1,3 +1,5 @@
+#!/bin/bash
+yum update
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-17-current.tar.gz
 tar -zxvf asterisk-17-current.tar.gz
 cd contrib/scripts
