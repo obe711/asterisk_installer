@@ -1,12 +1,11 @@
 #!/bin/bash
-yum update
+yum check-update
+yum upgrade
+yum clean all
+yum install nano wget curl net-tools lsof bash-completion psmisc
+nmtui-hostname
+nmtui-edit
+nmtui-connect
+pstree -p
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-17-current.tar.gz
 tar -zxvf asterisk-17-current.tar.gz
-cd contrib/scripts
-./install_prereq install
-./install_prereq install-unpackaged
-cd ..
-cd ..
-./configure
-make
-make install
